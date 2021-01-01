@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chunkArray</title>
+
+<script>
+
+function chunkArray(array,size) {
+console.log(size);
+
+let chunkArray =[];
+
+const last = chunkArray[chunkArray.length-1];
+
+for(let element of array) {
+        
+          
+           if(!last || chunkArray.length == size) {
+                     
+                     console.log(!last);
+                     console.log(chunkArray.length==size);
+                     
+                      chunkArray.push([element]);
+           }
+             else  {
+             last.push(element);
+           }
+}
+return chunkArray;
+}
+
+
+
+let y = chunkArray([27,34,35,21,],2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

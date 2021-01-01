@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>capitalize first letter</title>
+</head>
+<body>
+    <script>
+                         //  capitalize first letter
+        function capitalize(str) {
+
+       let words =  str.split(" ").map(word=>{
+               let selectFirstletter= word.slice(0,1);
+                let  remaningelement = word.slice(1);
+                let changeuppercaseletter =   selectFirstletter.toUpperCase();
+                 console.log(changeuppercaseletter);
+                  
+                 return   changeuppercaseletter;//undefined reason
+                });
+        
+
+
+        
+        }
+         console.log(capitalize("today there is heavy rain"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

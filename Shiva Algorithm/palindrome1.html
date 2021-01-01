@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome</title>
+</head>
+<body>
+ <script>
+//? to check sentance is  palindrome or not   and  remove  white space and  punctuation using    regular expression and match();
+        function  palindrome(str){
+           
+    let  first =  str.split(" ").join("").toLowerCase();
+     let second = str.split(" ").reverse().join("").toLowerCase();
+     return first==second;
+
+
+
+
+
+        }
+  
+      console.log(palindrome("was It a car or a cat i saw"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </script>   
+</body>
+</html>

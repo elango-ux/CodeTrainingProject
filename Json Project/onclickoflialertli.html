@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick of li alert   li</title>
+
+    <script>
+       window.onload=function(){
+       function onclickofLialertLi(jsonData) {
+            let createUl = document.createElement("UL");
+            let attachToBody =  document.body.append(createUl);
+            //let createLi;
+            let  createtextNode;
+            for(let i=0;i<jsonData.length;i++){
+                
+                
+         let  createLi = document.createElement("LI");
+            createtextNode =document.createTextNode(jsonData[i]);
+             createLi.append(createtextNode);
+            createUl.append(createLi);
+            createLi.onclick= function(event){
+            alert(event.target.innerHTML)
+
+           }
+                
+}
+                
+}      
+ onclickofLialertLi(["hello","how are you","hope you are good","smile"])
+
+    }
+ </script> 
+</head>
+<body>
+</body>
+</html>

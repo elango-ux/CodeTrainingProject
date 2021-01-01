@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+  <script>
+
+// find  the   character is  unique  in the string
+function  uniqueValue(str){
+let =array=[];
+   for(let char of  str){
+     if(array.indexOf(char)!==-1){//Value does not exist return -1
+    return false; //if value  exist it return  false
+    }
+    array.push(char);
+}
+ return true;//value does not exist it return true(unique);
+   }
+console.log(uniqueValue("abcde"));
+   console.log(uniqueValue("abcdefbb"));
+</script>  
+  
+
+</body>
+</html>

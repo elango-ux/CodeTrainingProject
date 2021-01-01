@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome2</title>
+<script>
+
+function palindrome2(str) {
+                
+    return str.split('').every((char,i)=>{
+    console.log(char,i);
+    let z = char === str [str.length-i-1];
+      console.log(str.length-i-1);
+          console.log(z);
+  });
+
+
+
+}
+//palindrome2("lady");
+      palindrome2("gig");
+
+</script>
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

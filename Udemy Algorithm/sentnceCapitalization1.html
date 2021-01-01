@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sentancecapitalization1</title>
+    <script>
+
+        function capitalizer(str) {
+            let result = str[0].toUpperCase();
+            for (let i = 1; i < str.lenght; i++) {
+                if (str[i-1] == "") {
+                    result += str[i].toUpperCase();
+               
+                }
+                else {
+                 result += str[i];
+                }
+            }
+            return result;   
+        }
+        let capital = capitalizer("hi there");
+        console.log(capital);
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

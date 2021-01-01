@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>longest word</title>
+<script>
+
+function longestWord(str) {
+let size= 0;
+let  max=[""];
+
+let word =str.split(" ");
+ for(let i=0; i<word.length;i++){
+    
+    if(word[i].length>=size){
+          size= word[i].length;    
+         if(max[max.length-1].length < word[i].length){
+              max=[];
+              max.push(word[i]);
+              console.log(max);
+
+         }
+             else{
+                     max =[...max,word[i]];
+
+             }
+ 
+        }
+
+              return [...max];
+ }
+
+
+
+
+
+
+}
+
+console.log(longestWord("i woke up  early today"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

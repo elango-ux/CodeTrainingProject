@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step print </title>
+</head>
+<body>
+    <script>
+
+    function  step(n,row = 0 ,stair = "") {
+         if(n == row) {  // it check row and coloum equal  so it return or stop recursion
+          return;
+}
+          if(n==stair.length) {// current length of string  equal  to  current row
+                console.log(stair);
+                console.log(n);
+                console.log(stair.length);
+               return step(n, row+1);
+          }
+                if(stair.length<= row)//  if current  length of stair is less than  or equal to current row length than  print #  else "  "
+                {
+                       stair +='#' ; }
+
+                 else {
+                             stair += ' ';
+                            
+
+                }
+                  step(n,row ,stair)
+            
+            }
+            
+            step(3);
+                       
+
+            
+
+
+    
+   
+
+
+</script>
+</body>
+</html>

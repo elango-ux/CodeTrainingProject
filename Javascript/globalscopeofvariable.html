@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>global scope</title>
+
+
+<script>
+
+
+let  globalVariable =6;
+function block() {
+var localvariable = 7;
+console.log(globalVariable);
+
+}
+
+block();
+console.log(globalVariable);
+
+function second() {
+let output ="";
+if(typeof globalVariable!= undefined){
+output += "globalvaraible:" +" "+ globalVariable;
+console.log(output);
+
+
+
+}
+
+
+}
+
+
+second();
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>record collection</title>
+</head>
+<body>
+     <script>
+
+ var collection = {
+
+  "2548" : { 
+    album :"slippery when wet", 
+   "artist": "bon jovi",
+    "tracks": [
+                "let it rock",
+                "you give love a bad name"
+]
+  },
+ 
+   "2468" : {
+                   "album": 1998, 
+                    "artist": "prince",
+                    "tracks": [
+                        "1998",
+                        "little red corvetta"
+                    ]
+},
+"1245": {
+                    "artist": "robert palymer",
+                    "tracks": []
+},
+
+"5439": {
+
+
+         "album": "ABBA GOLD"
+}
+};
+
+
+
+
+// it keeps the copy of object
+var objectCopy = JSON.parse(JSON.stringify(collection));
+console.log(objectCopy);
+
+function updateRecordCollection(id,property,value){
+
+if(value =="") {
+    delete collection[id][prop];
+    console.log(collection);
+   }
+    else if(property =="tracks") {
+      collection[id][prop] = collection[id][property] || [];
+      collection[id][property].push(value);
+
+    }else 
+    collection[id][property]=value;
+return collection;
+
+}
+console.log(updateRecordCollection(5439, "artist","ABBA"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </script>
+</body>
+</html>

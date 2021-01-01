@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anagram</title>
+
+    <script>
+function anagram(stringA,stringB) {
+          const acharMap = buildCharMap(stringA);
+          const bcharMap = buildCharMap(stringB);
+        if(Object.keys(acharMap).length != Object.keys(bcharMap).length) {
+
+            return false;
+        }
+        for(let char in acharMap) {
+
+
+         if ( acharMap[char]!==  bcharMap[char]) {
+         
+              return false;
+         
+         }
+
+        }
+           return true;
+
+}
+            let result = anagram("elango","ognale");    
+               console.log(result);
+               
+                function buildCharMap(str) {
+                    const charMap={};
+                    for(let char of str.replace(/[^\w]/g, "").toLowerCase()) {
+
+                          charMap[char]= charMap[char] +1||1;
+                       
+
+                    }
+                           return charMap;
+
+                }
+                     buildCharMap("");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

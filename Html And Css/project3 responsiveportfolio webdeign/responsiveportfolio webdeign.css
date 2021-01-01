@@ -1,0 +1,168 @@
+body {
+
+  font-family: 'Roboto Condensed', sans-serif;
+  color:white;
+
+
+}
+/* global view */
+
+/* the whole div */
+
+.container {
+
+
+min-height: 500px;
+max-width: 1024px;
+margin: 0 auto;
+display:flex;
+flex-wrap:wrap;
+justify-content: space-between;
+padding-top:140px;
+}
+.header-container {
+    background-color: #1a6eab;
+    min-height:100px;
+    margin-bottom: 40px;
+    position:fixed;
+    width:100%;
+
+
+}
+header {
+
+      
+        min-height: 100px; 
+       max-width:1024px;
+       margin: 0 auto;
+       display:flex;
+       justify-content: space-between;
+        align-items:center;
+        
+}
+
+.footer-container {
+
+background-color:#1a6eab;
+min-height:100px;
+margin: 20px 0;
+}
+
+footer {
+  background-color: #912c4e;
+  min-height:100px; 
+  max-width:1024px;
+margin: 0 auto;
+}
+ 
+a {
+
+color:white;
+text-decoration: none;
+
+}
+.mybutton {
+
+  
+padding: 10px 20px;
+border-style:   solid;
+border-width: 1px;
+margin-left:10px;
+
+ }
+/*add  css style to firstlint  */
+.col p::first-line {
+font-weight: 700px;
+}
+
+/* to make div  */
+.col {
+  background-color: blueviolet;
+  width:30%;
+margin-bottom: 40px;
+}
+/* fit image  inside div*/
+ .col img {
+width:100%;
+height:auto;
+}
+ 
+/* select all  p  within col class */
+.col p { 
+
+ color:white;
+ font-size:15px;
+ padding:10px 20px;
+line-height: 1.5rem;
+}
+
+
+/* it hide the div */
+.hide-desktop-only {
+display:none;
+
+
+
+ }
+/* tablet view  on media query */
+@media only screen and (max-width: 768px) {
+
+.col {
+
+
+  width:45%;
+}
+
+/* it never allow to hide div */
+hide-desktop-only { 
+
+  /* display:block; */
+  
+  
+  
+
+}
+
+
+/* mobileview  media query*/
+@media only screen and (max-width: 400px) {
+
+  .col {
+width:100%;
+  }
+    
+  header {
+    display: block; 
+   text-align: center;
+}
+nav a {
+display:block;
+}
+.logo {
+padding: 40px 0;
+}
+.mybutton {
+margin: 0;
+}
+
+.header-container {
+
+position: relative;
+
+
+
+}    
+
+.container {
+padding-top: 0;
+}
+  
+   }
+.hide-mobile {
+
+
+  display:none;
+}
+
+
+}

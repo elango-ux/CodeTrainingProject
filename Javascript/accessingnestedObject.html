@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accessing nested oject</title>
+</head>
+<body>
+    
+    <script>
+    var myStorage = {
+
+        "car": {
+             
+          "inside": {
+                       "glove box": "map",
+                        "passengers seat": "crumbs",
+                          "rowdy": "elango",
+                           "lion dates": "strength"
+            }, 
+          "outside": {
+                          "truck": "jack"
+                  }
+}
+};
+  let  accessvalue =  myStorage.car;
+  console.log(accessvalue);
+     let accessvalue1 = myStorage.car.inside;
+         console.log(accessvalue1); 
+         let accessvalue2 = myStorage.car.inside["glove box"];
+         console.log(accessvalue2);
+        //  let accessvalue3 = myStorage.car.inside["passengers  seat"];  
+        //  console.log(accessvalue3);
+        let accessvalue4 = myStorage.car.inside.rowdy;
+         console.log(accessvalue4);
+         let accessvalue5 = myStorage.car.inside["lion dates"];
+         console.log(accessvalue5);
+
+         let accessvalue6 = myStorage.car.outside;
+         console.log(accessvalue6);
+         let accessvalue7 = myStorage.car.outside["truck"];//ask doubt
+           console.log(accessvalue);
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsion project</title>
+</head>
+<body>
+    <script>
+    let obj1 = { "name": "name1", "price": 20, "quantity": 3 };
+        let obj2 = { "name": "name2", "price": 30, "quantity": 4 };
+        let obj3 = {
+            "name": "name3"
+        };
+
+        let obj4 = {
+            "name": "name4"
+
+
+        };
+
+
+
+        let sumOfprice = obj1.price + obj2.price;
+        console.log(sumOfprice);
+        obj3.price = sumOfprice;
+        console.log(obj3);
+        let sumOfQuantity = obj1.quantity + obj2.quantity;
+        console.log(sumOfQuantity);
+        obj3.quantity = sumOfQuantity;
+        console.log(obj3);
+
+        let twicePrice = obj4.price = 2 * obj3.price;
+        console.log(twicePrice);
+        console.log(obj4);
+        let twiceQuantity = obj4.quantity = 2 * obj3.quantity;
+        console.log(twiceQuantity);
+        console.log(obj4);
+
+
+    </script>
+</body>
+</html>

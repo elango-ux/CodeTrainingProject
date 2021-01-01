@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestingObjectproperty</title>
+</head>
+<body>
+    <script>
+     function hasPropertyObject(checkObject){
+        var myCar = {
+    "make": 'Ford',
+    "model": 'Mustang',
+    "year": 1969
+};
+    if(myCar.hasOwnProperty(checkObject))
+      return myCar[checkObject];
+
+
+     }
+ console.log( hasPropertyObject("make"));
+
+
+
+ 
+    </script>
+</body>
+</html>

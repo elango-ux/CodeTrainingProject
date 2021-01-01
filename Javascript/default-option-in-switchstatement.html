@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defaultoptioninswitchs</title>
+</head>
+<body>
+    <script>
+    function switchStatement(val) {
+        var answer =""; 
+        switch(val) {
+           case "a":
+            answer="alpha";
+            break;
+          case "b":
+            answer = "beta";
+           break;  
+        case "c":
+            answer="gamma";
+           break;  
+         case "d":
+               answer ="delta"; 
+             break;
+             default: 
+             answer="stuff";
+             break;
+         }
+          return answer;
+
+     }
+console.log(switchStatement("d")); 
+</script>
+
+</body>
+</html>

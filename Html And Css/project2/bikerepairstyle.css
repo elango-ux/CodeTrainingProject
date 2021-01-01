@@ -1,0 +1,219 @@
+html {
+
+ height: 100%;
+
+}
+
+ 
+body {
+
+
+
+    background-image:linear-gradient(red,yellow, rgba(98, 98, 146, 0.76));
+}
+
+
+
+
+.container {
+
+width:1024px;
+min-height:300px;
+margin-left:auto;
+margin-right:auto ;
+}
+header {
+
+        
+         min-height:100px;
+         display:flex;
+         justify-content:space-between;
+         align-items:center;
+         padding-top:20px;
+         padding-bottom:20px;
+         object-fit:cover;
+         border-bottom: 2px dotted lightgrey;
+          margin-bottom: 20px;
+         
+}
+main {
+    
+    min-height:300px;
+    display:flex;
+    align-items:center;ku
+}
+
+.cards {
+
+    display:flex;
+    justify-content:space-between;
+}
+
+.cards1 {
+    background-size:cover;
+    background-image:url(image/image-background-card1.jpg);
+width:25%;
+min-height:150px;
+margin-top:20px;
+background-position:bottom;
+box-shadow: 5px 5px 5px black;
+
+}
+.cards2 {
+
+    
+    background-image:url(image/image-background-card2.jpg);
+    background-size:cover;
+    min-height:150px;
+    background-position:bottom;
+    width:25%;
+    margin-top:20px;
+    box-shadow: 5px 5px 5px black;
+
+}
+
+.cards3 {
+    min-height:250px;
+    width:30%;
+    margin-top:20px;
+    background-image:url(image/image-background-card3.jpg) ;    
+    background-position:bottom;   
+    box-shadow: 5px 5px 5px black;  
+}
+
+.herobox1 {
+             
+    flex:2;
+    
+    }
+    
+    .herobox2 {
+             
+        flex:1;
+        border-radius:100px;
+        }
+        h2 {
+
+
+            font-size:2rem;
+            text-align: center;
+            color:white;
+           padding-top:5px;
+        }
+   
+        .cards p {
+          
+         font-size: 1rem;
+         color:white;
+         text-align:center;
+         line-height:1.25rem;
+        margin-top: 20px;
+        }
+
+        .cards a  {
+
+              color:white;
+              text-decoration:none;
+}
+
+
+.cards i {
+
+    font-size:100px;
+    padding-left:80px;
+    padding-right: 80px;
+    padding-top:10px;
+    color:white;
+}
+
+
+
+.card1.card2 .card3 {
+
+       padding:30px,20px30px,20px;
+       box-sizing: border-box;
+
+}
+
+
+a {
+         
+         text-decoration:none;
+         
+
+        }
+.myButton {
+
+            background-color:white;
+            color:#FA4003;
+            font-family: 'Courier New', Courier, monospace;
+            padding:11px 25px  11px  25px; 
+            display:inline-block;
+            margin-top:10px;
+            border-radius: 100px;  /*button corner*/
+            box-shadow: 5px 5px 5px black; 
+}
+.myButton:hover {
+
+background-color:lightgreen;
+transition-duration: 1s;
+
+
+} 
+
+
+
+
+.herobox2 img  {  /*image  is within div*/
+
+border-radius: 100px;
+
+}
+
+
+h1 {
+     font-size:75px;
+    box-shadow: 5px 5px 5px black;
+    margin-right: 10px;
+    margin-bottom:10px;
+    color:red;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+nav a.mybutton {
+    background-color: white;
+    padding-top:10px;
+    padding-right: 10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    border-radius:25px;
+    margin-left:20px;
+    border: 5px solid green;
+
+}
+
+.testimonials {
+      
+    display:flex;
+    flex-wrap:wrap;
+justify-content: space-between;
+margin-bottom: 100px;
+
+}
+.tbox {
+width:47%;
+padding:50px;
+border:2px solid white;
+box-sizing: border-box;
+margin-top:30px;
+
+
+}
+.t-box p:last-of-type  {
+
+           font-size:2rem;
+           padding-left:30px;
+
+
+
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+window.onload= function(){
+  var child = document.getElementById('child2'); 
+  var parent = child.parentNode; 
+  
+  
+ let   x =  Array.prototype.indexOf.call(parent.children, child); 
+console.log(x);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+</script>
+
+
+<p id = "GFG-UP" > </p>
+<div   class="parent" id = "parent">
+    
+  parent
+  <div id="child1">child1</div>
+    <div id="child2">child2</div>
+  </div>
+  
+  
+  
+  
+  <p id ="GFG-DOWN"></p>
+  
+
+</body>
+</html>

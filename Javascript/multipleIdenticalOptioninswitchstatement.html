@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiple identical option in switch statement</title>
+</head>
+<body>
+    
+    <script>
+    function switchStatement(val) {
+        var answer =""; 
+        switch(val) {
+           case "a" :
+            case "b": 
+        case "c":
+            answer="mid"; 
+             break;
+            case  "d": 
+         case "c" :
+         case "d":  
+          answer  = "low";
+           break;
+          case  "e": 
+         case "f" :
+         case "g":  
+          answer  = "high";
+        break;
+          default : 
+        answer ="strr";
+        }
+          return answer;
+
+     }
+ console.log( switchStatement("2"));
+</script>
+</body>
+</html>

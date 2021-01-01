@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum of number   equal to largest  number in array</title>
+</head>
+<body>
+   <script>
+      
+      
+      // sum of number  in the  array equal to largest number 
+     // eg) 1,2,3= 1+2=3
+      function sumofNumberequalTOlargestNumberArray(arr) {
+
+          let largestnumber = arr[0];
+        
+        let sum=0;
+          for(let i=0;i<arr.length;i++){
+              if(largestnumber < arr[i]){
+                   largestnumber = arr[i];
+                }
+                sum +=arr[i];
+            }
+             sum =sum-largestnumber; 
+            console.log(sum);
+            if(sum== largestnumber){
+                console.log("SUM OF array equal to largest number")
+}
+else {
+console.log("sum of array is not equal largestNUMBEER")           
+}   
+}
+sumofNumberequalTOlargestNumberArray([2,3,7,9,7]);
+sumofNumberequalTOlargestNumberArray([2,2,2,6]);
+</script> 
+</body>
+</html>

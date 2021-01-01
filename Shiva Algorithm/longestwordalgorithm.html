@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logest word</title>
+</head>
+<body>
+    <script>
+      function longestword(str){
+          let words= str.split(" ");
+          let longestword ="";
+          for (let word of  words) {
+               if(word.length > longestword.length){
+                 longestword = word;
+               }
+               
+            }
+                 return longestword;
+      }
+   
+  console.log( longestword("hi i am robo the chitti"));
+  console.log( longestword("i am made of metal"));
+   </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+.container{
+
+    background-color:white;
+    height: 640px;
+     max-width:1000px;
+    margin: 0 auto;
+    display:flex;
+    flex-wrap:wrap;
+     justify-content: space-between;  
+    }
+    .child{
+          background-color:grey; 
+         width:200px;
+        min-height:150px;
+        margin-bottom:20px;
+         padding-left:20px; 
+         
+    }
+    .cols{
+    
+     background-color: blue;
+     width:200px;
+     min-height:100px;
+     margin-bottom:20px;
+    padding-left:20px; 
+    
+    
+    }
+
+    
+   

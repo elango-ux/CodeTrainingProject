@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sumofinputvalueof5textbox</title>
+ <style>
+
+   .parent{
+      width: 1024px;
+      height:300px;
+      background-color:yellow;
+       margin-left:100px;
+       margin-top:200px;
+       
+}
+input[type=text]
+{
+    margin-top: 130px;
+
+}
+#textbox5 {
+  margin-top:10px;
+
+ }
+ .label5 {
+
+      margin-left:20px;
+
+
+ }
+.cssdiv1 {
+
+background-color:white;
+width:200px;
+height:50px;
+margin-left: 300px;
+font-size:30px;
+text-align: center;
+padding-top:5px;
+margin-top:10px;
+}
+</style>
+<script>
+
+window.onload = function(){
+document.getElementById("button").onclick= function(){
+let textbox1Value = document.getElementById("textbox1").value;
+console.log(textbox1Value);
+let textbox2Value = document.getElementById("textbox2").value;
+console.log(textbox2Value);
+let textbox3Value = document.getElementById("textbox3").value;
+console.log(textbox3Value);
+let textbox4Value = document.getElementById("textbox4").value;
+console.log(textbox4Value);
+let textbox5Value = document.getElementById("textbox5").value;
+console.log(textbox5Value);
+  
+
+textBoxSum =  parseInt(textbox1Value) + parseInt (textbox2Value)+
+parseInt (textbox3Value)+parseInt (textbox4Value)+parseInt (textbox5Value);
+   if (Number.isInteger(textBoxSum)|| textBoxSum>0)
+   {
+
+       let displaySum =document.getElementById("div1").innerHTML = textBoxSum; 
+}
+else{
+document.getElementById("div1").innerHTML="0"; 
+
+}
+}
+}
+</script>
+
+</head>
+<body>
+     <div class="parent">
+   
+             
+        <label for="ftextbox">First box:</label>
+        <input type="text" id="textbox1" name="ftextbox">
+        <label for="stextbox">second box:</label>
+        <input type="text" id="textbox2" name="stextbox">
+        
+       
+        <label for="thtextbox">third box:</label>
+        <input type="text" id="textbox3" name="thtextbox">
+    
+        <label for="ftextbox">fourth box:</label>
+        <input type="text" id="textbox4" name="ftextbox"><br>
+        <label for="ftextbox" class="label5">fifth box:</label>
+        <input type="text" id="textbox5" name="ftextbox">
+        <button  id="button">ADD</button>
+    
+        <div id = "div1" class="cssdiv1"></div>
+
+    </div>
+    
+
+</body>
+</html>

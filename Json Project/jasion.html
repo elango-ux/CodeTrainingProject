@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+   let v = '{ "arr1": { "val":[ 10,20,30], "modifier":2}, "arr2": {"val":[5,7,8], "modifier":3}, "arr":{"val":[5,4,3], "modifier":4}}';
+
+    let jasion = JSON.parse(v);
+
+    let valmodifiermultiply = 0;
+    for (let i in jasion.arr1.val) {
+      valmodifiermultiply += jasion.arr1.val[i] * jasion.arr1.modifier;
+    }
+    console.log(valmodifiermultiply);
+    valmodifiermultiply1 = 0;
+    for (let i in jasion.arr2.val) {
+      valmodifiermultiply1 += jasion.arr2.val[i] * jasion.arr2.modifier;
+    }
+    console.log(valmodifiermultiply1);
+    valmodifiermultiply3 = 0;
+    for (let i in jasion.arr.val) {
+      valmodifiermultiply3 += jasion.arr.val[i] * jasion.arr.modifier;
+
+    }
+    console.log(valmodifiermultiply3);
+    sumofmodifier = 0;
+    for (let mod in jasion) {
+      sumofmodifier += jasion[mod].modifier;
+
+    }
+    console.log("sum of modifier " + sumofmodifier);
+
+
+  </script>
+    </body>
+    
+    </html>

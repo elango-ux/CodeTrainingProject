@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accessing nested array</title>
+</head>
+<body>
+    <script>
+   var myplants = [
+{
+      "type" :"flowers",
+       "list": [
+                 "rose",
+                 "tupuli",
+                 "dandeletion"
+                ]
+},
+       {
+                "type":"tree",
+                "list": [
+                           "fir", "pine", "brich"
+
+                ]
+}
+];
+  console.log(myplants);
+  let accessValue = myplants[0]["type"];
+  console.log(accessValue);
+  let accessvalue1= myplants[0].list;
+  console.log(accessvalue1);
+  let accessvalue2 = myplants[0].list[0];
+  console.log(accessvalue2);
+   let  accessvalue3=myplants[1];
+   console.log(accessvalue3);
+   let accessvalue4 = myplants[1].list[0];
+   console.log(accessvalue4);
+   let accessvalue5 = myplants[1].list[0];
+   console.log(accessvalue4);
+   
+    </script>
+</body>
+</html>

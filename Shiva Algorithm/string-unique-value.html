@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+   
+   function  uniqueValue(str){
+
+for(let i=0;i<str.length;i++){
+ // find last index of   repeated  character is found then   it  return index oflast  character and   
+  if( str.lastIndexOf(str[i])==i){
+return true; 
+}
+return false; 
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+   }
+   console.log(uniqueValue("abcde"));
+  console.log( uniqueValue("abcdeab"));
+   
+   
+   </script> 
+</body>
+</html>

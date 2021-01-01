@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome</title>
+</head>
+<body>
+    <script>
+
+
+function palindrome(str){
+
+let reversed ="";
+console.log(reversed);
+console.log(reversed.length);   
+for(let i=0;i<str.length;i++){
+   reversed =  str[i] + reversed; 
+console.log(reversed);
+}
+return str == reversed;
+}
+
+console.log(palindrome("abcd"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile lookup</title>
+</head>
+<body>
+    <script>
+
+    
+let contacts =[
+
+{
+   "firstName": "akira",
+    "lastName":"laine",
+    "number": "0988776655",
+     "likes": ["pizza","codding","browning point"]
+},
+
+{
+   "firstName": "sherlocks",
+    "lastName":"holmes",
+    "number": "0988999655",
+     "likes": ["pizza","codding","browning point"]
+},
+
+{
+   "firstName": "elango",
+    "lastName":"karthick",
+    "number": "unknow",
+     "likes": ["pizza","codding","browning point"]
+},
+];
+function lookupProfile(name,prop){
+  for(let i= 0;i < contacts.length;i++)
+       if(contacts[i].firstName === name){
+        return contacts[i].prop || "no such property";
+        
+       
+
+
+        }
+
+          return "no such contacts";
+}
+console.log(   lookupProfile("elango","likes"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

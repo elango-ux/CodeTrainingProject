@@ -1,0 +1,19 @@
+.container{
+
+ max-width:400px; 
+ height:300px;
+ background-color: yellow;
+ 
+
+ 
+}
+.animate{
+
+    position: relative;
+max-width: 100px; 
+height:100px;
+background-color:red;
+
+
+    
+}

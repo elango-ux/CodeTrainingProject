@@ -1,0 +1,26 @@
+
+.container{
+
+
+    max-width:500px;
+    min-height:100px;
+    background-color:yellow;
+    margin:auto;
+    margin-top:300px;
+    display:flex;
+justify-content: space-around;
+
+}
+ .row{
+
+margin-left: 10px;
+font-size: 20px;
+color:rgba(0, 0, 0, 0.589);
+
+ }
+
+
+
+
+
+

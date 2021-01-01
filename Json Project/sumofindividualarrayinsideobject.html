@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum of individual array inside objects
+
+
+
+
+    </title>
+</head>
+<body>
+    <script>
+        // find  sum of  individually arr1, arr2,arr3
+        //if  object  contain  array you  can iterate through for in loop
+        let v = '{ "arr1": [10,20,30],"arr2":[5,7,2], "arr3":[5,4,3] }';
+
+
+        let jasion = JSON.parse(v);
+        
+        console.log(jasion);
+        function sumArrayIndividual() {
+
+            let sum = 0;
+            for (let i in jasion.arr1) { //ititerate through  array which is present  inside 
+                sum += jasion.arr1[i];
+            }
+            console.log(sum);
+            let sum1 = 0;
+            for (let i in jasion.arr2) {
+                sum1 += jasion.arr2[i];
+            }
+            console.log(sum1);
+            let sum3 = 0;
+
+            for (let i in jasion.arr3) {
+
+                sum3 += jasion.arr3[i];
+
+            }
+            console.log(sum3);
+
+            let sumTotal = sum + sum1 + sum3;
+            console.log(sumTotal);
+
+        }
+
+        sumArrayIndividual();
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stand in line</title>
+
+<script>
+function addItem(array,num) {
+   array.push(num);// it add to last item
+    return  array.shift();// it delete first item
+}
+let array = [23,67,88,89]
+console.log("before " + JSON.stringify(array)); 
+
+ addItem(array,34);
+ console.log("after " + JSON.stringify(array));
+</script>
+</head>
+<body>
+    
+</body>
+</html>

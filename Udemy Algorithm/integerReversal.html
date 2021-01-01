@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>integerReverse</title>
+
+<script>
+function integerReverse(str) {
+let  x = str.toString().split('').reverse().join('');
+ return parseInt(x)*Math.sign(str);
+
+}
+let y = integerReverse(-90);
+console.log(y);
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>
