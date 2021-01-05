@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function setObject(str){
+           let temp = new Set() 
+         for(let char  of str){
+           if(temp.has(char)){// it letter exist  it return false
+              return false;}
+              temp.add(char);// it add character tothe set          
+      }
+          
+       
+             return true; 
+}
+
+console.log(setObject("abcde"));
+console.log(setObject("abcdefgasss"));
+</script>
+</body>
+</html>
