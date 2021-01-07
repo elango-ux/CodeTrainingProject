@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+let product =[
+{
+title : "iphone8",
+company: "samsang"
+  },
+{
+title:"galaxy",
+company: "samsang",
+},
+{
+title:"iphone7",
+company: "apple",
+},
+{
+title:"iphonex5",
+company: "apple",
+},
+{
+title: "HTc phone",
+company: "htc",
+}
+];
+
+function uniqueValue(arr){
+ let tempArr = arr.map((item) =>item.company);  //it get value  of company property
+return [...new Set(tempArr)];// set provide unique value and spread operator create new  array  with unique  value...  
+}
+console.log(uniqueValue(product));
+</script>
+</body>
+</html>
