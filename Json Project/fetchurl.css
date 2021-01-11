@@ -1,0 +1,46 @@
+.div1{
+    width:300px;
+    height:150px;
+    background-color:white;
+    margin-left:500px;
+    margin-right: auto;
+    margin-top:300px;
+    margin-bottom:auto;
+    font-size: 50px;
+    }
+    .flexContainer{
+       display:flex;
+    }
+    .picklist1{
+    margin-left:30px;
+    padding-left:100px;
+    padding-right:50px;
+    margin-top:30px;
+    }
+    .textbox{
+    margin-left:300px;
+    margin-top:30px;
+    width:180px;
+    height:50px;
+    border-style: solid;
+    font-size:30px;
+    }
+    .picklist2{
+     margin-left:30px;
+     margin-top:20px;
+     width:180px;
+     height:50px;
+     border: 1px dotted black;
+    }
+    .label1{
+    margin-left:200px;
+    margin-top:40px;
+    font-size:30px;
+    
+    }
+    .label2{
+    
+        margin-left:700px;
+        margin-top:40px;
+        font-size:30px;
+    }
