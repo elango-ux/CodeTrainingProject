@@ -23,4 +23,3 @@ if(result != -1):
     print("element is at present index",result)
 else:
     print("element is not present in the array",result)
-
