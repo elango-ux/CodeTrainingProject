@@ -5,20 +5,16 @@ def maxsum(arr, window_size):
     if arraysize <= window_size:
         print("invalid operation")
         return -1
-    # findsum of window size 2 but could not understand why bracket [] is used
+    # sum of window size, arr[i] is iterable and to get range of sum 
     windowsum = sum([arr[i]  for i in range(window_size)])
     print(windowsum)
     maxsum = windowsum
-    # delete first element in subarray by  and add next element in the array
+    # delete first element in subarray   and add next element in the array
     for i in range(arraysize-window_size):
-       print(arr[i])
-
-      
-
-
-
-
-
+       # it delete first element in window and next element
+        windowsum = windowsum - arr[i] + arr[i + window_size]
+        maxsum = max(windowsum, maxsum)
+    return maxsum
 # sum of maximum subarray size 2
 #step 1 declare array
 arr = [80,-50,90,100]
