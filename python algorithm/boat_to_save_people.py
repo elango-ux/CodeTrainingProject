@@ -1,19 +1,18 @@
-def boat(people): 
+def boat_to_save(people, limit):
+    print(limit)
     left = 0
-    right = len(people)-1
-    boat = 0
-    
-    limit = 5
-    print(people[right])
-    while people[left] < people[right] :
-        if (people[left] + people[right] <= limit):
+    right = len(people)
+    boatno = 0
+    while left <= right:
+        if left == right:
+            boatno +=1
+            break
+        if people[left] + people[right] <= limit:
             left += 1
-            right -= 1
-            boat += 1
-        print(boat)
-        if people[left] == people[right]:
-            boat += 1
-    
-    
-people = [3, 4, 5, 6]
-print(boat(people))
+        right -=1
+        boatno +=1
+        return boatno
+
+people = [2 , 3, 4, 5, 7, 10]
+limit = 10
+print(boat_to_save(people, limit))    
