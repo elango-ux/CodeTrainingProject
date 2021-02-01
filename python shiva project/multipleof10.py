@@ -1,7 +1,7 @@
 # create empty list
 list = []
 #list comprehension 
-multipleoffive = [item * 5 for item in range(0, 5000)]
+multipleoffive = [item * 5 for item in range(0, 10001)]
 # add item to the list
 list.append(multipleoffive)
 #display multiple of 5
