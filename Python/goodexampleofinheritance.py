@@ -1,16 +1,14 @@
 class Elango(Exception):
+    pass  
   
-  
- 
 
-#stream 
 class Stream:
     def __init__(self):
         self.opened = False
     
-    def opened(self):
+    def open(self):
         if self.opened:
-            raise Elango("stream is  already opeened") 
+            raise Elango("stream is  already opened") 
         
         self.opened = True
     def closed(self):
