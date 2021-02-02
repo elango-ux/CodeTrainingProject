@@ -5,4 +5,5 @@ class Flyer:
 class Swimmer:
     def swim(self):
         pass
-    
+class FlyingFish(Flyer, swimmer):
+    pass
