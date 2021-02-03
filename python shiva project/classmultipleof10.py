@@ -8,18 +8,17 @@ class Mynum:
     
     list = []
     def multiple(self):
-        list.append(self.x)
-        list.sort(reverse = True)
-        filtered = [item for item in list if item % 10 == 0]
+        list.append(self)
+        filtered = [item for item in list if item.x % 10 == 0]
+        
         print(filtered)
         
 
 list =[]
 for i in  range(1, 201):
     point = Mynum(i * 5)
-    print(point)
     point.multiple()
-   
+    
     
 
 
