@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Charges</title>
+
+
+    <script>
+
+        function calculateCharges() {
+
+            let parkingHours = prompt("Enter Parking Hours");
+
+            if (parkingHours > 0) {
+                let parkingValue = parseInt(parkingHours);
+
+                if (parkingHours < 3) {
+                    parkingCharge1 = parkingHours * 0.5
+                    console.log("Your Parking Charges is" + " " + "$" + parkingCharge1)
+                }
+                else if (parkingHours === 3) {
+
+                    console.log("Your Parking Charges is $2")
+                }
+                else if (parkingHours > 3 && parkingHours < 24) {
+                    let charge = (parkingHours - 3) * 0.5 + 2
+                    console.log("Your Parking Charges is" + " " + "$" + charge)
+                }
+                else if (parkingValue === 3) {
+                    console.log("Your Parking Charges is" + " " + "$2");
+
+                }
+
+                else if (parkingValue === 24) {
+                    console.log("Your Parking Charges is" + " " + "$10");
+
+                }
+            }
+        }
+
+        calculateCharges();
+    </script>
+</head>
+<body>
+</body>
+</html>
