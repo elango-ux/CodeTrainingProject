@@ -49,31 +49,68 @@
           slides[slideIndex-1].style.display = "block";
         
         }
-      
-        let select = document.querySelector(".input");
-           select.onchange= function(){
-
-            let sel1 = document.querySelector(".input");
-            console.log(sel1);
-            let strUser1 = sel1.options[sel1.selectedIndex].value;
-            console.log(strUser1)
-            //it provide  value  dependend  on  selected value of   dropdown menu 
-            document.querySelector(".body1").style.fontFamily = strUser1;
-            console.log(strUser1) 
-
+        
+       function fontFamily(){
+  
+        let  onchangeEvent = document.querySelector(".input")
+        onchangeEvent.onchange= function(){
+          let sel1 = document.querySelector(".input");
+          console.log(sel1);
+          let strUser1 = sel1.options[sel1.selectedIndex].value;
+         console.log(strUser1);
+         document.body.style.fontFamily = strUser1;
 }
 
-let select1 = document.querySelector(".backgroundcolor");
-           select1.onchange= function(){
+        }
+        fontFamily();
+        function fontSize(){
+        let  onchangeEvent = document.querySelector(".backgroundcolor")
+        onchangeEvent.onchange= function(){
+          let sel1 = document.querySelector(".backgroundcolor");
+          console.log(sel1);
+          let strUser1 = sel1.options[sel1.selectedIndex].value;
+         console.log(strUser1);
+          let body = document.querySelector(".container");
+          body.style.fontSize = strUser1; 
+          console.log(body);
+        }
+      }
+        fontSize();
 
-            let sel2 = document.querySelector(".backgroundcolor");
-            console.log(sel2);
-            let strUser2 = sel2.options[sel2.selectedIndex].value;
-            console.log(strUser2)
-            //it provide  value  dependend  on  selected value of   dropdown menu 
-            document.querySelector(".body1").style.fontSize = strUser2;
-            console.log(strUser2) 
-           }
-  
+
+        function backgroundColor(){
+
+                
+          document.body.style.backgroundColor = "yellow";
+        document.querySelector(".btn").onclick = function(){
+         
+        let bodyColor = document.querySelector(".body1");
+          let color = [ "red", "orange", "green"];
+         const colorIndex = parseInt(Math.random()*color.length);
+         document.body.style.backgroundColor = color[colorIndex]
+         
+        }
+
+        }
+           backgroundColor()
+       function colorPicker() {
+        let colorinput =  document.querySelector(".colorpicker");
+        let textbox =  document.querySelector(".textbox");
+        colorinput.addEventListener('input',()=>{
+       let colorValue = colorinput.value;
+       console.log(colorValue);
+       let  textbox1  = textbox.value = colorValue;
+       console.log(textbox1);
+       document.body.style.backgroundColor = colorValue;
+       
+       
+       
+        });
+
+ 
 
 
+
+
+       }
+       colorPicker();

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+ 
+
+
+<body>
+ <input type="text" class = "textbox"> 
+ <input type="color" class="colorpicker" name="head"
+ value="#e66465">
+    <script>
+ let colorinput =  document.querySelector(".colorpicker");
+ let textbox =  document.querySelector(".textbox");
+ colorinput.addEventListener('input',()=>{
+let colorValue = colorinput.value;
+console.log(colorValue);
+let  textbox1  = textbox.value = colorValue;
+console.log(textbox1);
+document.body.style.backgroundColor = colorValue;
+
+
+
+ });
+</script>
+
+</body>
+</html>

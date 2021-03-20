@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student registraton form</title>
+</head>
+  <style>
+    
+    .div {
+         margin-left:300px;
+          margin-top:300px;
+          background-color: rgb(85, 108, 129);
+          width:380px;
+          
+    }
+    
+    input[type=text]{     
+      border: 2px solid rgba(0, 0, 0, 0.952);
+        border-radius: 4px;
+       margin-left:0px;
+       margin-top:10px;
+      }
+
+.labelName  {
+  
+    font-family:  "monospace";
+    margin-left:20px;
+}
+#birthday {
+
+  border: 2px solid rgb(12, 0, 0);
+  border-radius: 4px;
+  margin-left:20px;
+  margin-bottom:10px;
+}
+select,option{
+
+width: 260px;
+margin-left:20px;
+          
+}  
+input[type=email]{
+
+   width: 180px;
+   margin-left:30px;
+   border: 2px solid rgba(0, 0, 0, 0.952);
+        border-radius: 4px;
+        margin-top:10px;
+}
+
+.content {
+  visibility: hidden;
+  }    
+  .content1 {
+  visibility: visible;
+  color: red;
+  margin-top:5px;
+  margin-left:60px;
+  
+  }
+#cont {
+
+  margin-top:10px;
+  margin-bottom:5px;
+}
+.address1{
+
+     width:200px;
+     height:50px;
+}
+.address2{
+
+  width:200px;
+  height:50px;
+  margin:0px;
+}
+#label3{
+  font-size: 20px;
+
+}
+
+</style>
+<body>
+    <div class = "div">
+    <!-- student name -->
+    <div class = "div1">
+    <label for="fname" class = "labelName"> Name:</label>
+    <input type="text" id="fname" name="fname" class = "name" maxlength = "30">
+   </div><br>
+    <!-- student registration form -->
+    
+   
+   
+   <div class = "div2">
+        <label for="fname" class = "labelName"> registerNo:</label>
+        <input type="text"   class = "registerNo" >
+        </div><br>
+       
+        <div class = "div3">
+        <form action="/action_page.php">
+          <label for="birthday" class = "labelName">Birthday:</label>
+          <input type="date" id="birthday" name="birthday">
+          
+        </form>
+        
+      
+      
+      
+      </div>
+       <div class = "div3">
+
+        <label for="program" class = "labelName">program:</label>
+        <select name="program" class ="dropdownlist" >
+          <option class = "dropdownlist1" value="B.E courses">B.E program</option>
+          <option class = "dropdownlist1" value="Computer Science Engineering.">Computer Science Engineering.</option>
+          <option  class = "dropdownlist1" value="Mechanical Engineering.">Mechanical Engineering.</option>
+          <option class = "dropdownlist1" value="Civil Engineering.">Civil Engineering.</option>
+          <option class = "dropdownlist1" value="Electronics and Communication Engineering.">Electronics and Communication Engineering.</option>
+        </select>
+         
+       </div>
+   <div class ="div4">
+
+    <label for="Email" class = "labelName">Email</label>
+    <input type="email" class = "textbox">
+    <p id = "cont" class = "content">valid</p>
+</div>
+  
+
+<div>
+    <label for="fname" class = "labelName"> tempaddress:</label>
+    <input type="text" name="fname" class = "address1" maxlength = "100">
+    
+    <label for="vehicle1" id  = "label3">please click to copy temp address to permanent address  I</label><br>
+<input type="checkbox" class ="checkbox" name="vehicle2"><br>
+
+    
+    <label for="fname" class = "labelName"> permanentaddress:</label>
+    <input type="text" name="fname" class = "address2" maxlength = "100">
+</div>    
+      
+  </div>
+  
+   
+   
+   
+   
+   <script>
+      function studentName(){
+       document.querySelector(".name").addEventListener('input',()=>{
+               
+                 let nameRef  = document.querySelector(".name");
+                 var letters = /^[A-Za-z]+$/;
+                  if(nameRef.value.match(letters)) {
+                   let alphabatName = nameRef.value.toUpperCase();
+                    nameRef.value = alphabatName;
+                  }
+                  else{
+                   
+                    nameRef.value = "";
+                   
+                }
+    });
+       
+}
+studentName()  
+function registerNumber(){  
+document.querySelector(".registerNo").addEventListener('input',()=>{
+          console.log("eeee");
+    let registerNoRef  = document.querySelector(".registerNo");
+      console.log(registerNoRef)
+    //Regex for Valid Characters i.e. Alphabets, Numbers and Space.
+       var regex = /^[A-Za-z0-9 ]+$/
+    
+    var isValid = regex.test(registerNoRef.value);
+    if (!isValid) {
+        registerNoRef.value = ""; 
+    } else {
+        let alphabat = registerNoRef.value.toUpperCase();
+        console.log(alphabat)
+        registerNoRef.value = alphabat;
+    }
+
+
+});
+
+}
+registerNumber()
+
+ function emailvalidation(){
+  document.querySelector(".textbox").addEventListener('input',()=>{
+    let textbox = document.querySelector(".textbox").value;
+    let regx = /^([a-zA-Z0-9\.-]+)@([a-zA-z0-9-]+).([a-z]{2,8})$/;
+          if(regx.test(textbox)){
+           
+               let x = document.querySelector("#cont").className ="content1";
+               
+               document.querySelector(".content1").innerHTML = "valid";
+            }
+           else {
+               document.querySelector("#cont").innerHTML = "invalid";
+    }
+    });
+
+
+
+ }
+ emailvalidation();
+
+
+         let x = document.querySelector(".checkbox").addEventListener('click', ()=>{
+
+            let tempadd = document.querySelector(".address1").value;
+               
+            
+            let permanentaddress = document.querySelector(".address2");
+
+             permanentaddress.value = tempadd;
+         });
+
+
+
+
+
+
+</script>
+</body>
+</html>

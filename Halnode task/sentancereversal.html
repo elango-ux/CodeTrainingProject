@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sentance reversal</title>
+</head>
+<body>
+    <div class = "div1">
+  
+    <label for="fname" class = "label1">sentance Reversal:</label><br>
+  <input type="text" class = "textbox1" name="fname">
+
+  <button class = "btn">Go</button>
+
+</div>
+   <style>
+    .div1 {
+
+   margin-top:300px;
+   margin-left:300px;
+}
+    
+.label1{
+     
+      font-size:25px;
+      font-weight: bold;
+    } 
+ input[type= text]{
+    border: 2px solid rgba(0, 0, 0, 0.952);
+        border-radius: 4px;
+        width:200px;
+        height:18px;
+  
+
+ }
+.btn {
+
+    border: 2px solid rgba(0, 0, 0, 0.952);
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: rgb(231, 219, 219);
+}
+
+
+
+
+
+   </style>
+<script>
+  
+    
+    var div = document.createElement("div");
+    document.querySelector(".btn").addEventListener("click", ()=>{
+   // reverse string
+    let string = document.querySelector(".textbox1").value;
+  let  reversedString =   string.split("").reverse().join("");
+  div.setAttribute("class", "democlass");
+  
+  
+  div.innerHTML += "<span>"+reversedString+"</span>";
+ 
+ 
+  document.body.append(div);
+});
+
+
+   
+   //create div
+   //var div = document.createElement("div");
+     //div.setAttribute("class", "democlass");
+     
+     
+     //div.innerHTML = "<span>"+"hello"+"</span>";
+    
+    
+    // document.body.append(div);
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

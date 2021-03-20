@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        
+        
+            function Validate() {
+                //Regex for Valid Characters i.e. Alphabets, Numbers and Space.
+                var regex = /^[A-Za-z0-9 ]+$/
+                 console.log(regex);
+                //Validate TextBox value against the Regex.
+                var isValid = regex.test(document.getElementById("txtName").value);
+                console.log(isValid);
+                if (!isValid) {
+                    alert("Contains Special Characters.");
+                } else {
+                    alert("Does not contain Special Characters.");
+                }
+         
+                return isValid;
+            }
+        </script>
+
+
+
+
+</body>
+</html>
