@@ -52,32 +52,52 @@
   
     
     var div = document.createElement("div");
+    div.setAttribute("class", "democlass");
+    document.body.append(div);
     document.querySelector(".btn").addEventListener("click", ()=>{
-   // reverse string
-    let string = document.querySelector(".textbox1").value;
-  let  reversedString =   string.split("").reverse().join("");
-  div.setAttribute("class", "democlass");
-  
-  
-  div.innerHTML += "<span>"+reversedString+"</span>";
- 
- 
-  document.body.append(div);
-});
-
-
    
-   //create div
+   
+   
+   
+   
+      // reverse string
+   
+ let str =  document.querySelector(".textbox1").value
+  console.log(str);
+  // convert to words   
+  let x =   str.split(" ");
+  console.log(x);
+  //loop through words
+  for(character of x)
+{     
+  console.log(character);
+  //convert to words and reverse and joint to words
+  let y =  character.split("").reverse().join(" ");
+   console.log(y);
+  div.innerHTML += "<span>"+y+"</span>";
+}  
+});
+     //create div
    //var div = document.createElement("div");
      //div.setAttribute("class", "democlass");
      
      
      //div.innerHTML = "<span>"+"hello"+"</span>";
-    
+   // });
     
     // document.body.append(div);
 
-
+    //const str = 'Hello World how is it outside';
+    //const reverseSentence = str => {
+      // const arr = str.split(" ");
+        //  console.log(arr);
+       //const reversed = arr.map(el => {
+         // let x =  el.split('').reverse();
+          //console.log(x);
+       //});
+       //return reversed.join(" ");
+    //};
+    //console.log(reverseSentence(str));
 
 
 
