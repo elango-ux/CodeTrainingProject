@@ -22,11 +22,7 @@ int areaofRectangle(){
 return Length*Breadth;
 
 
-}
-
-
-
-};
+}};
 
 
 

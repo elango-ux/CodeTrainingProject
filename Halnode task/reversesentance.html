@@ -9,28 +9,35 @@
 <body>
     <script>
 
-
-
-
-        function reverseString(str) {
-                 let x = str.split("");
-                 for(let i =0;i< x.length;i++){
-                  console.log(i); 
-                  if(x.includes("h") === true) {
-                      console.log("ddd");
-
-                    
-                   }
+let word = "hello how are you";
+    for( char of word){
+  console.log(char);
+let x = char.includes("y"); 
+console.log(x);
+      }  
 
 
 
 
-                 }
+let word1 = "helloo are you";
+let x = word1.split(" ");
+count = 0;
+let n = "you";
+for( char1 of  x) {
+   let m =  char1.includes(n);
+ if(m){
+  
+    count++;
+console.log(count);
+ }
+}
 
-      
-     }
-        
-        reverseString("hi how are you"); 
-    </script>
-</body>
+</script>
+
+
+
+
+
+
+    </body>
 </html>
