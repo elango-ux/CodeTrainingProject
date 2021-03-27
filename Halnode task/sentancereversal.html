@@ -9,10 +9,14 @@
 <body>
     <div class = "div1">
   
-    <label for="fname" class = "label1">sentance Reversal:</label><br>
-  <input type="text" class = "textbox1" name="fname">
-
+    <label for="fname" class = "label1">sentance Reversal:</label>
+    <br>
+    <label for="fname" class ="label">phrase:</label>
+  <input type="text" class = "textbox1" name="fname"><br><br>
+  <label for="fname" class = "label2">filter :</label>
+  <input type="text" class = "textbox2" name="fname"><br>
   <button class = "btn">Go</button>
+  <p class ="text"> </p>
 
 </div>
    <style>
@@ -20,6 +24,7 @@
 
    margin-top:300px;
    margin-left:300px;
+  
 }
     
 .label1{
@@ -27,27 +32,30 @@
       font-size:25px;
       font-weight: bold;
     } 
- input[type= text]{
+ 
+ 
+    input[type= text]{
     border: 2px solid rgba(0, 0, 0, 0.952);
         border-radius: 4px;
         width:200px;
         height:18px;
-  
-
- }
+        margin-left:5px;
+      }
 .btn {
 
     border: 2px solid rgba(0, 0, 0, 0.952);
     font-weight: bold;
     border-radius: 4px;
     background-color: rgb(231, 219, 219);
-}
-
-
-
-
-
-   </style>
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:5px;
+    padding-bottom:5px;
+     margin-left:50px;
+     margin-top:10px;
+     text-align:center;
+  }
+</style>
 <script>
   
     
@@ -55,15 +63,8 @@
     div.setAttribute("class", "democlass");
     document.body.append(div);
     document.querySelector(".btn").addEventListener("click", ()=>{
-   
-   
-   
-   
-   
-      // reverse string
-   
- let str =  document.querySelector(".textbox1").value
-  console.log(str);
+      let str =  document.querySelector(".textbox1").value
+      console.log(str);
   // convert to words   
   let x =   str.split(" ");
   console.log(x);
@@ -76,32 +77,41 @@
    console.log(y);
   div.innerHTML += "<span>"+y+"</span>";
 }  
-});
-     //create div
-   //var div = document.createElement("div");
-     //div.setAttribute("class", "democlass");
-     
-     
-     //div.innerHTML = "<span>"+"hello"+"</span>";
-   // });
+
+
+let word = document.querySelector(".textbox1").value;
+
+
+ document.querySelector(".textbox2").addEventListener('input',()=>{
+       console.log("dddd");
     
-    // document.body.append(div);
+   let  filterWords  =  document.querySelector(".textbox2").value;
+        
+   let splitWord  = word.split(" ");
+  
+   count = 0;
+   let filter = filterWords;
+  
+for( char1 of  splitWord) {
+  
+  let m =  char1.includes(filter);
+   
+  if(m){
+  
+    count++;
 
-    //const str = 'Hello World how is it outside';
-    //const reverseSentence = str => {
-      // const arr = str.split(" ");
-        //  console.log(arr);
-       //const reversed = arr.map(el => {
-         // let x =  el.split('').reverse();
-          //console.log(x);
-       //});
-       //return reversed.join(" ");
-    //};
-    //console.log(reverseSentence(str));
+    document.querySelector(".text").innerHTML = count + "word(s) filtered out";
+    
+  }
+  
+}
 
 
+});
 
 
+});
+ 
 </script>
 
 </body>
