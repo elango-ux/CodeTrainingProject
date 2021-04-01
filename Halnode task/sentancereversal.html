@@ -55,64 +55,79 @@
      margin-top:10px;
      text-align:center;
   }
+
+.mystyle{
+text-decoration: underline;
+}
 </style>
 <script>
-  
-    
-    var div = document.createElement("div");
+  var div = document.createElement("div");
     div.setAttribute("class", "democlass");
     document.body.append(div);
     document.querySelector(".btn").addEventListener("click", ()=>{
-      let str =  document.querySelector(".textbox1").value
-      console.log(str);
-  // convert to words   
+    let str =  document.querySelector(".textbox1").value
+    div.innerHTML = null; 
+    let allowCharacter = letters = /^\w[A-Za-z\s]+$/;
+    console.log(allowCharacter);
+    
+    if(str.match(allowCharacter))
+{
+// convert to words   
   let x =   str.split(" ");
   console.log(x);
   //loop through words
+  
   for(character of x)
 {     
   console.log(character);
   //convert to words and reverse and joint to words
-  let y =  character.split("").reverse().join(" ");
-   console.log(y);
-  div.innerHTML += "<span>"+y+"</span>";
+  let reverse =  character.split("").reverse().join(" ");
+ div.innerHTML += "<span >"+reverse+ "</span>";
+ 
 }  
+}
+else{
 
-
-let word = document.querySelector(".textbox1").value;
-
-
- document.querySelector(".textbox2").addEventListener('input',()=>{
-       console.log("dddd");
-    
-   let  filterWords  =  document.querySelector(".textbox2").value;
-        
-   let splitWord  = word.split(" ");
-  
-   count = 0;
-   let filter = filterWords;
-  
-for( char1 of  splitWord) {
-  
-  let m =  char1.includes(filter);
-   
-  if(m){
-  
-    count++;
-
-    document.querySelector(".text").innerHTML = count + "word(s) filtered out";
-    
-  }
-  
+  document.querySelector(".textbox1").value = null;
+  document.querySelector(".textbox1").value = "enter the character";
+}
+//create underline
+let selectSpan = document.querySelector(".democlass");
+var spanArray=selectSpan.getElementsByTagName('span');
+for(let i = 0;i<spanArray.length;i+=2 ){
+  spanArray[i].classList.add("mystyle");
 }
 
 
-});
+let word = document.querySelector(".textbox1").value;
+document.querySelector(".textbox2").addEventListener('input',()=>{
+       
+   
+       let  filterWords  =  document.querySelector(".textbox2").value;
+let splitWord  = word.split(" ");
+count = 0;
+if( /^[a-zA-Z]+$/.test(filterWords)){
+
+let filter = filterWords;
+for( char1 of  splitWord) {
+let m =  char1.includes(filter);
+if(m){
+count++; 
+let txt2value = document.querySelector(".text").innerHTML = count + "word(s) filtered out";
+ }
+
+}
+}
 
 
+
+  else {
+
+    
+    document.querySelector(".text").innerHTML = 0 + "word(s) filtered out";
+  }
 });
- 
+});
 </script>
-
 </body>
 </html>

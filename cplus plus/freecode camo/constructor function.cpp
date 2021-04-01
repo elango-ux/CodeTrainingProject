@@ -1,4 +1,4 @@
-#include<iostream.>
+#include<iostream>
 using namespace std;
 int main(){
 
@@ -19,15 +19,8 @@ Book(string atitle, string bauthor, int aage){
 
 };
 
-Book book1("harrypotter", "jfjffjfjfj", 25);
-
-
-book1.title= "jjjjjjjjjj";
+Book book1(" harrypotter", " jfjffjfjfj ", 25);
+book1.title= " jjjjjjjjjj";
 cout<< book1.title;
-
-
-
-
-
 return 0;
 }
